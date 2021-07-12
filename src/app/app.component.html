@@ -9,21 +9,13 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a routerLinkActive="active" routerLink="index.html">Home</a></li>
-          <li><a routerLinkActive="active" routerLink="about.html">About</a></li>
-          <li><a routerLinkActive="active" routerLink="resume.html">Resume</a></li>
+          <li><a routerLinkActive="active" routerLink="index.html">{{ 'home' | translate}}</a></li>
+          <li><a routerLinkActive="active" routerLink="about.html">{{ 'about' | translate}}</a></li>
+          <li><a routerLinkActive="active" routerLink="resume.html">{{ 'resume' | translate}}</a></li>
           <!-- <li><a href="services.html">Services</a></li> -->
           <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
           <li><a routerLinkActive="active" routerLink="#">Contact</a></li>
-          <li>
-            <div ngbDropdown class="d-inline-block">
-              <a  id="dropdownMenu1" ngbDropdownToggle class="text-uppercase nav-link">{{lang}}</a>
-              <a ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <a href="javascript:;" (click)="changeLanguage('fr')" class="dropdown-item text-uppercase">{{'french' | translate}}</a>
-                <a href="javascript:;" (click)="changeLanguage('en')" class="dropdown-item text-uppercase">{{'english' | translate}}</a>
-              </a>
-            </div>
-          </li>
+
           <span class="mr-auto hidden-md-up"></span>
 
         </ul>
@@ -35,6 +27,9 @@
 
 
       <div class="header-social-links">
+        <a href="javascript:;" *ngIf="lang === 'en'" (click)="changeLanguage('fr')"><i><img src="assets/img/france.png" alt="French"></i> {{ 'french' | translate}}</a>
+        <a href="javascript:;" *ngIf="lang === 'fr'" (click)="changeLanguage('en')"><i><img src="assets/img/united-kingdom.png" alt="French"></i> {{ 'english' | translate}}</a>
+
         <a href="https://twitter.com/LeChatong/" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="https://github.com/LeChatong/" target="_blank" class="github"><i class="bi bi-github"></i></a>
         <a href="https://t.me/lechatong/" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
