@@ -12,7 +12,7 @@ export class AppComponent  implements OnInit {
   lang: string = 'fr';
 
   constructor(private translateService: TranslateService){
-
+    this.changeLanguage(this.lang);
   }
 
   ngOnInit() {

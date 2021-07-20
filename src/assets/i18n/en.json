@@ -3,6 +3,20 @@
   "english": "English",
   "home": "Home",
   "about": "About",
-  "aboutme": "About of me",
-  "resume": "Resume"
+  "about-me": "About of me",
+  "resume": "Resume",
+  "presentation": "I am <b> ULRICH ARMEL TCHATONG </b>, application developer with 06 years of professional experience in the field of software engineering. Currently working for ITGStore Consulting where I hold the position of Full-Stack Developer, I specialized in Java (Spring Boot), Python (Django) in Back-end and Angular in Frontend technologies.",
+  "mini-presentation": "I'm a Web Application Developer",
+  "Age": "Age",
+  "Website": "Website",
+  "Phone": "Phone",
+  "City": "City",
+  "Years of experience": "Years of experience",
+  "Remote": "Remote",
+  "Description": "Welcome to my personal website. There you will find information about me, such as my professional and academic background as well as details about my skills and much more.",
+  "Backend Development": "Backend Development",
+  "Frontend Development": "Frontend Development",
+  "Teams Work": "Teams Work",
+  "Tools and Environment": "Tools and Environment",
+  "Skills": "Skills"
 }
