@@ -12,3 +12,6 @@
   color: #fff;
   background: #34b7a7;
 }
+.sr-only{
+  opacity: 0%;
+}

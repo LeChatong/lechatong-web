@@ -36,14 +36,13 @@
                 </ul>
               </div>
             </div>
-            <p>
-              {{ 'presentation' | translate}}
-            </p>
+            <p [innerHTML]="'presentation' | translate" datatype="html"></p>
           </div>
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section>
+<!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills">
@@ -116,9 +115,10 @@
         </div>
 
         <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+          <ngb-carousel [showNavigationArrows]="false"
+                        [showNavigationIndicators]="true" class="swiper-wrapper">
 
-            <div class="swiper-slide">
+            <ng-template ngbSlide class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
                 <h3>Saul Goodman</h3>
@@ -129,10 +129,10 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div>
+            </ng-template>
             <!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <ng-template ngbSlide class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                 <h3>Sara Wilsson</h3>
@@ -143,10 +143,10 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div>
+            </ng-template>
             <!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <ng-template ngbSlide class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                 <h3>Jena Karlis</h3>
@@ -157,9 +157,9 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </ng-template><!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <ng-template ngbSlide class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                 <h3>Matt Brandon</h3>
@@ -170,9 +170,9 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </ng-template><!-- End testimonial item -->
 
-            <div class="swiper-slide">
+            <ng-template ngbSlide class="swiper-slide">
               <div class="testimonial-item">
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                 <h3>John Larson</h3>
@@ -183,10 +183,11 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </ng-template><!-- End testimonial item -->
 
-          </div>
-          <div class="swiper-pagination"></div>
+            <div class="carousel-indicators swiper-pagination"></div>
+          </ngb-carousel>
+
         </div>
 
       </div>

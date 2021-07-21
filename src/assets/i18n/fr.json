@@ -18,5 +18,13 @@
   "Frontend Development": "Développement Frontend",
   "Teams Work": "Travail en équipe",
   "Tools and Environment": "Outils et Environnement",
-  "Skills": "Compétences"
+  "Skills": "Compétences",
+  "Your Name": "Votre Nom",
+  "Your Phone Number": "Votre Numéro de Téléphone",
+  "Your Email": "Votre Email",
+  "Subject": "Objet",
+  "Send Message": "Envoyez le Message",
+  "Your message has been sent. Thank you!": "Votre message a été envoyé. Merci!",
+  "Loading": "Chargement",
+  "desc-contact": "Prenez contact avec moi en m'envoyant un message"
 }

@@ -18,5 +18,13 @@
   "Frontend Development": "Frontend Development",
   "Teams Work": "Teams Work",
   "Tools and Environment": "Tools and Environment",
-  "Skills": "Skills"
+  "Skills": "Skills",
+  "Your Name": "Your Name",
+  "Your Phone Number": "Your Phone Number",
+  "Your Email": "Your Email",
+  "Subject": "Subject",
+  "Send Message": "Send Message",
+  "Your message has been sent. Thank you!": "Your message has been sent. Thank you!",
+  "Loading": "Loading",
+  "desc-contact": "Contact me by sending me a message"
 }
