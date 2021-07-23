@@ -10,6 +10,7 @@ export class AppComponent  implements OnInit {
   title = 'lechatong-web';
 
   lang: string = 'fr';
+  navbarOpen:boolean = false;
 
   constructor(private translateService: TranslateService){
     this.changeLanguage(this.lang);
@@ -23,5 +24,9 @@ export class AppComponent  implements OnInit {
   changeLanguage(lang:string) {
     this.translateService.use(lang);
     this.lang = lang;
+  }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 }

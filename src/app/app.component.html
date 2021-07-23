@@ -3,32 +3,35 @@
   <header id="header" class="fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">LECHATONG</a></h1>
+      <h1 class="logo me-auto me-lg-0" [ngClass]="{ 'show': navbarOpen }"><a href="index.html">LECHATONG</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light order-last order-lg-0">
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+
+        <ul class="navbar-nav mr-auto">
           <li><a routerLinkActive="active" routerLink="index.html">{{ 'home' | translate}}</a></li>
           <li><a routerLinkActive="active" routerLink="about.html">{{ 'about' | translate}}</a></li>
           <li><a routerLinkActive="active" routerLink="resume.html">{{ 'resume' | translate}}</a></li>
           <!-- <li><a href="services.html">Services</a></li> -->
           <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
           <li><a routerLinkActive="active" routerLink="contact.html">Contact</a></li>
-
-          <span class="mr-auto hidden-md-up"></span>
-
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <span class="mr-auto hidden-md-up"></span>
+        <!--<i class="bi bi-list mobile-nav-toggle"></i>-->
 
-
+        </div>
       </nav><!-- .navbar -->
 
 
 
       <div class="header-social-links">
-        <a href="javascript:;" *ngIf="lang === 'en'" (click)="changeLanguage('fr')"><i><img src="assets/img/france.png" alt="French"></i> {{ 'french' | translate}}</a>
-        <a href="javascript:;" *ngIf="lang === 'fr'" (click)="changeLanguage('en')"><i><img src="assets/img/united-kingdom.png" alt="French"></i> {{ 'english' | translate}}</a>
+        <a href="javascript:;" *ngIf="lang === 'en'" (click)="changeLanguage('fr')"><i><img src="assets/img/france.png" alt="{{ 'english' | translate}}"></i> </a>
+        <a href="javascript:;" *ngIf="lang === 'fr'" (click)="changeLanguage('en')"><i><img src="assets/img/united-kingdom.png" alt="{{ 'french' | translate}}"></i></a>
 
         <a href="https://twitter.com/LeChatong/" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
         <a href="https://github.com/LeChatong/" target="_blank" class="github"><i class="bi bi-github"></i></a>
