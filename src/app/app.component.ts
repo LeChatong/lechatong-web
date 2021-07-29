@@ -13,12 +13,13 @@ export class AppComponent  implements OnInit {
   navbarOpen:boolean = false;
 
   constructor(private translateService: TranslateService){
-    this.changeLanguage(this.lang);
+    translateService.setDefaultLang(this.lang);
+    //this.changeLanguage(this.lang);
   }
 
   ngOnInit() {
-    let currentLang = this.translateService.currentLang;
-    this.lang = currentLang.match(/en|fr/) ? currentLang : 'fr';
+    /*let currentLang = this.translateService.currentLang;
+    this.lang = currentLang.match(/en|fr/) ? currentLang : 'fr';*/
   }
 
   changeLanguage(lang:string) {
