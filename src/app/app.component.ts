@@ -11,6 +11,10 @@ export class AppComponent  implements OnInit {
 
   lang: string = 'fr';
   navbarOpen:boolean = false;
+  customNavbar:boolean = true;
+
+  texte:string = '';
+  couleur:string = '';
 
   constructor(private translateService: TranslateService){
     translateService.setDefaultLang(this.lang);

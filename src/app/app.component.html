@@ -5,39 +5,32 @@
 
       <h1 class="logo me-auto me-lg-0"><a href="index.html">LECHATONG</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar navbar-expand-lg navbar-light order-last order-lg-0">
         <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
 
-        <ul class="navbar-nav mr-auto">
-          <li><a routerLinkActive="active" routerLink="index.html">{{ 'home' | translate}}</a></li>
-          <li><a routerLinkActive="active" routerLink="about.html">{{ 'about' | translate}}</a></li>
-          <li><a routerLinkActive="active" routerLink="resume.html">{{ 'resume' | translate}}</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-          <li><a routerLinkActive="active" routerLink="contact.html">Contact</a></li>
-        </ul>
-        <span class="mr-auto hidden-md-up"></span>
-        <!--<i class="bi bi-list mobile-nav-toggle"></i>-->
+          <div class="navbar-nav mr-auto">
+            <li><a routerLinkActive="active" routerLink="index.html">{{ 'home' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="about.html">{{ 'about' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="resume.html">{{ 'resume' | translate}}</a></li>
+            <li><a routerLinkActive="active" routerLink="contact.html">Contact</a></li>
+          </div>
+          <span class="mr-auto hidden-md-up"></span>
+          <div class="navbar-nav">
+            <li><a href="javascript:;" *ngIf="lang === 'en'" (click)="changeLanguage('fr')"><i><img src="assets/img/france.png" alt="{{ 'english' | translate}}"></i> </a></li>
+            <li><a href="javascript:;" *ngIf="lang === 'fr'" (click)="changeLanguage('en')"><i><img src="assets/img/united-kingdom.png" alt="{{ 'french' | translate}}"></i></a></li>
 
+            <li><a href="https://twitter.com/LeChatong/" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="https://github.com/LeChatong/" target="_blank" class="github"><i class="bi bi-github"></i></a></li>
+            <li><a href="https://t.me/lechatong/" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ulrich-armel-tchatong-0a3860bb/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a></li>
+          </div>
         </div>
-      </nav><!-- .navbar -->
-
-
-
-      <div class="header-social-links">
-        <a href="javascript:;" *ngIf="lang === 'en'" (click)="changeLanguage('fr')"><i><img src="assets/img/france.png" alt="{{ 'english' | translate}}"></i> </a>
-        <a href="javascript:;" *ngIf="lang === 'fr'" (click)="changeLanguage('en')"><i><img src="assets/img/united-kingdom.png" alt="{{ 'french' | translate}}"></i></a>
-
-        <a href="https://twitter.com/LeChatong/" target="_blank" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://github.com/LeChatong/" target="_blank" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://t.me/lechatong/" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
-        <a href="https://www.linkedin.com/in/ulrich-armel-tchatong-0a3860bb/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
+      </nav>
+      <!-- .navbar -->
 
     </div>
 
